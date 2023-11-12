@@ -1,0 +1,154 @@
+div{
+    padding: 0;
+    margin: 0;
+}
+
+/* Style for the flag body */
+
+.flag{
+    height: 600px;
+    width: 900px;
+    background-color: white;
+    border: 2px solid black;
+    position: relative;
+    z-index: 0;
+}
+
+/* Style for the circle */
+
+.circles{
+    position: relative;
+    top: 150px;
+    left: 300px;
+    height: 300px;
+    width: 300px;
+}
+
+.redsemi-circle{
+    position: absolute;
+    height: 150px;
+    width: 300px;
+    border-radius: 225px 225px 0 0;
+    background-color: #c81026;
+    z-index: 1;
+}
+.bluesemi-circle{
+    position: absolute;
+    top: 150px;
+    height: 150px;
+    width: 300px;
+    border-radius: 0px 0px 225px 225px;
+    background-color: #00459b;
+    z-index: 1;
+}
+
+/* Style for the inner curves of the circle */
+
+.joiner-red{
+    position: relative;
+    top:96px;
+    height: 100px;
+    width: 150px;
+    background-color: #c81026;
+    border-radius: 100%/100%;
+    z-index: 2;
+}
+.joiner-blue{
+    position: relative;
+    top: 4px;
+    left: 150px;
+    height: 100px;   
+    width: 150px;
+    background-color: #00459b;
+    border-radius: 100%/100%;
+    z-index: 2;
+    
+}
+
+/* Style for the lines */
+
+.rect{
+    height: 120px;
+    width: 150px;
+    position: absolute;
+    border: 0 solid white;
+    z-index: 1;
+}
+
+/* Four boxes for the four different corners */
+
+/* Top left corner box */
+.rect-one{
+    position: absolute;
+    top: 75px;
+    left: 120px;
+    transform: rotate(125deg);
+}
+
+/* Bottom left corner box */
+.rect-two {
+    position: absolute;
+    bottom:75px;
+    left: 120px;
+    transform: rotate(55deg);
+}
+
+/* Top right corner box */
+.rect-three {
+    position: absolute;
+    top: 75px;
+    right: 120px;
+    transform: rotate(55deg);
+}
+
+/* Bottom left corner box */
+.rect-four {
+    position: absolute;
+    bottom: 75px;
+    right: 120px;
+    transform: rotate(125deg);
+}
+
+/* Creating the lines in the boxes */
+
+.line{
+    width: 100%;
+    height: 24px;
+    position: relative;
+}
+
+/* For black lines */
+.rect-one-line-one, .rect-one-line-three, .rect-one-line-five, .rect-two-line-one, .rect-two-line-three, .rect-two-line-five, .rect-three-line-one, .rect-three-line-three, .rect-three-line-five, .rect-four-line-one, .rect-four-line-three, .rect-four-line-five{
+    background-color: black;
+}
+
+/* For white lines */
+.rect-one-line-two, .rect-one-line-four, .rect-two-line-two, .rect-two-line-four, .rect-three-line-two, .rect-three-line-four, .rect-four-line-two, .rect-four-line-four{
+    background-color: white;
+}
+
+/* For the white gaps in the black lines */
+
+.breaker{
+    position: absolute;
+    height: 26px;
+    background-color: white;
+    width: 20px;
+    left: 65px;
+    z-index: 2;
+}
+
+/* Middle line white gap */
+.rect-two-breaker-one, .rect-four-breaker-two{
+    top: 47px;
+}
+
+/* Outer line white gap */
+.rect-three-breaker-one, .rect-four-breaker-one{
+    bottom: 95px;
+}
+
+/* Inner line white gap */
+.rect-three-breaker-two, .rect-four-breaker-three{
+    top: 95px;
+}
